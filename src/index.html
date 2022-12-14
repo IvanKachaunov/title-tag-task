@@ -16,10 +16,9 @@
       <script>
 
         window.addEventListener('load', function () {
-          if(document.readyState === "complete"){
+          setTimeout(titleChange, 3000);
+          function titleChange(){
             document.title = 'One new message';
-          } else{
-            document.title = 'No new messages';
           }
         })
       </script>
