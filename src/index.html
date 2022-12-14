@@ -9,15 +9,19 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
-  <body onload="asd()">
+  <body>
     <div class="main">
       <div class="emoji mb-6">💣🤯💥</div>
       <button class="button">Boom?</button>
       <script>
-        document.title = "No new messages"
-        function asd(){
-          document.title = 'One new message';
-        }
+
+        window.addEventListener('load', function () {
+          if(document.readyState === "complete"){
+            document.title = 'One new message';
+          } else{
+            document.title = 'No new messages';
+          }
+        })
       </script>
     </div>
   </body>
